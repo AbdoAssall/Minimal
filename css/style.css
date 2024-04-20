@@ -26,7 +26,12 @@ html {
     /* width: 90%; */
 }
 /* small */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (min-width: 767px) {
     .container {
         max-width: 750px;
     }
@@ -51,6 +56,11 @@ html {
     margin-bottom: 40px;
     position: relative;
     color: #485355;
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 25px;
+    }
 }
 .section-title::after {
     content: "";
@@ -456,11 +466,11 @@ nav .logo {
     }
     #menu_checkbox:checked ~ .menu_toggle {
         left: 252px;
-        top: -59px;
+        top: 30px;
+        position: fixed;
     }
     #menu_checkbox:checked ~ .menu_toggle i::before {
         content: '\f00d';
-        position: absolute;
     }
     .menu_toggle i {
         font-size: 21px;
@@ -802,46 +812,46 @@ nav .logo {
     height: 45px;
     margin: 0 auto 10px;
     transition: all .5s;
-    background-position: center;
+    /* background-position: center; */
 }
-.service-area:hover .serv1 {
+/* .service-area:hover .serv1 {
     background-image: url(../images/serv1.1.png);
     background-position: center -90px;
-}
+} */
 .serv1 {
     background-image: url(../images/serv1.png);
 }
 .service-area:hover .serv1 {
     background-image: url(../images/serv1.1.png);
-    background-position: center -90px;
+    background-position: center 90px;
 }
 .serv2 {
     background-image: url(../images/serv2.png);
 }
 .service-area:hover .serv2 {
     background-image: url(../images/serv2.2.png);
-    background-position: center -90px;
+    background-position: center 90px;
 }
 .serv3 {
     background-image: url(../images/serv3.png);
 }
 .service-area:hover .serv3 {
     background-image: url(../images/serv3.3.png);
-    background-position: center -90px;
+    background-position: center 90px;
 }
 .serv4 {
     background-image: url(../images/serv4.png);
 }
 .service-area:hover .serv4 {
     background-image: url(../images/serv4.4.png);
-    background-position: center -90px;
+    background-position: center 90px;
 }
 .serv5 {
     background-image: url(../images/serv5.png);
 }
 .service-area:hover .serv5 {
     background-image: url(../images/serv5.5.png);
-    background-position: center -90px;
+    background-position: center 90px;
 }
 .service-content .title-service {
     font: 500 14px "Roboto", sans-serif;
@@ -859,9 +869,16 @@ nav .logo {
 .products .list-products {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .products .list-products li {
     padding: 10px 25px;
+}
+@media (max-width: 768px){
+    .products .list-products li {
+        width: 100%;
+        text-align: center;
+    }
 }
 .products .list-products li a {
     color: #666;
